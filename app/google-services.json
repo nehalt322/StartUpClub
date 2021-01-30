@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "269957892776",
+    "firebase_url": "https://startupclub-17caf.firebaseio.com",
+    "project_id": "startupclub-17caf",
+    "storage_bucket": "startupclub-17caf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269957892776:android:72a9b900a0bbadef0f909d",
+        "android_client_info": {
+          "package_name": "com.example.startupclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269957892776-b82dkv8f3akin2648r63be2uh4sb30nj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.startupclub",
+            "certificate_hash": "f5e22eb8d0b2825341b7a65ec329f0c042ce7781"
+          }
+        },
+        {
+          "client_id": "269957892776-p63f6jahrldbqc1siuren5ir7oi9cds1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbTdgBv3KhZMDttSkB9JoFprHayZneOFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269957892776-p63f6jahrldbqc1siuren5ir7oi9cds1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

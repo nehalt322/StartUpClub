@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">StartUpClub</string>
+    <string name="create">Create Account</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="Email">email</string>
+    <string name="Password">password</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="please_sign_in_to_continue">Please sign in to continue.</string>
+    <string name="username">Username</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="note">Don\'t have an account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="name">name</string>
+    <string name="phone">phone</string>
+    <string name="note2">Already have an account?</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="courses">Courses</string>
+    <string name="profile">Profile</string>
+    <string name="courses_fragment">This is Courses fragment</string>
+    <string name="previous">Previous</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="upcoming">Upcoming</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wait_while_we_arrange_an_event_for_you">Wait,while we arrange an event for you</string>
+    <string name="event_title">Event Title :</string>
+    <string name="description">Description</string>
+    <string name="venue">Venue :</string>
+    <string name="date">Date :</string>
+    <string name="time">Time -</string>
+
+</resources>
