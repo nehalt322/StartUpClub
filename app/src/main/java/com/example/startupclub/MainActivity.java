@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = FirebaseAuth.getInstance();
+/*        mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         viewPager2 = findViewById(R.id.main_viewpager);
         tabLayout = findViewById(R.id.main_tab);

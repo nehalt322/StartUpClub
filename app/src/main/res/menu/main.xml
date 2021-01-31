@@ -5,13 +5,21 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/courses"
-            android:icon="@drawable/ic_assignment"
-            android:title="@string/courses" />
+            android:id="@+id/home"
+            android:icon="@drawable/home_selector"
+            android:title="Home" />
+        <item
+            android:id="@+id/event"
+            android:icon="@drawable/event_selector"
+            android:title="@string/events" />
         <item
             android:id="@+id/profile"
-            android:icon="@drawable/ic_account_box"
+            android:icon="@drawable/profile_selector"
             android:title="@string/profile" />
+        <item
+            android:id="@+id/teams"
+            android:icon="@drawable/teams_selector"
+            android:title="Teams" />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_power_settings"

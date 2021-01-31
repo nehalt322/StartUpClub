@@ -42,5 +42,6 @@
     <string name="venue">Venue :</string>
     <string name="date">Date :</string>
     <string name="time">Time -</string>
+    <string name="events">Events</string>
 
 </resources>

@@ -1,41 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
-    android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-   <!-- <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            app:title="Navigation Bar"
-            android:background="@color/font"
-            app:titleTextColor="@color/white"/>
-        <FrameLayout
+            android:id="@+id/top_bar">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_bar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:id="@+id/custom_toolbar"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:background="@color/blue"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tab"
+                style="@style/TabStyle"
+                android:layout_below="@id/app_bar">
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
-    </RelativeLayout> -->
+            android:layout_below="@id/top_bar"
+            android:layout_above="@id/bottom_bar">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity 1"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                />
+        </RelativeLayout>
 
-    <include layout="@layout/tabbed_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_bar"
+            android:layout_alignParentBottom="true">
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_menu"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/main"
-        android:layout_gravity="start"/>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_navigation"
+                app:itemBackground="@color/blue"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/main">
 
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

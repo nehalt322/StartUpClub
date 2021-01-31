@@ -65,7 +65,7 @@
             android:drawablePadding="10dp"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:textColor="@color/font"
+            android:textColor="@color/blue"
             android:textSize="20sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +90,7 @@
             android:ems="10"
             android:hint="@string/Password"
             android:inputType="textPassword"
-            android:textColor="@color/font"
+            android:textColor="@color/blue"
             android:textSize="20sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -103,7 +103,7 @@
         android:background="#00000000"
         android:fontFamily="sans-serif-black"
         android:text="@string/forgot_password"
-        android:textColor="#092f5d"
+        android:textColor="@color/blue"
         android:textSize="15sp" />
 
     <android.widget.Button
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:text="@string/sign_up"
-            android:textColor="@color/font"
+            android:textColor="@color/blue"
             android:fontFamily="sans-serif-black">
 
         </android.widget.Button>

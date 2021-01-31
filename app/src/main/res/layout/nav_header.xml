@@ -11,12 +11,12 @@
         android:layout_height="200dp"
         android:id="@+id/image"
         android:src="@drawable/ic_person_white"
-        android:background="@color/font"
+        android:background="@color/blue"
         android:contentDescription="TODO" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/font"
+        android:background="@color/blue"
         android:id="@+id/name_text"
         android:padding="10dp"
         android:text="StartUpClubByMCKVIE"
