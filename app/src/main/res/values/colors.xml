@@ -2,13 +2,13 @@
 <resources>
 
     <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimaryDark">#053e4e</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#ffffff</color>
-    <color name="blue">#053E4F</color>
-    <color name="dark_blue">#033341</color>
+    <color name="blue">#04323f</color>
+    <color name="light_blue">#053e4e</color>
     <color name="grey">#ababab</color>
     <color name="my_orange">#FF6600</color>
-    <color name="orange">#D45812</color>
-    <color name="light_orange">#DB6D18</color>
+    <color name="orange">#d45812</color>
+    <color name="light_orange">#de6d17</color>
 </resources>

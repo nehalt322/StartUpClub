@@ -30,9 +30,10 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:src="@drawable/startuplogo"/>
-
                 </androidx.appcompat.widget.Toolbar>
+
             </com.google.android.material.appbar.AppBarLayout>
+
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,7 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Activity 1"
+                android:text="Activity 4"
                 android:layout_centerInParent="true"
                 android:textSize="20sp"
                 />

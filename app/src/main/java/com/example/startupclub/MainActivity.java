@@ -13,9 +13,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     TabLayout tabLayout;
     DatabaseReference databaseReference;
+    BottomNavigationView bottomNavigationView;
 
 
 
@@ -51,30 +54,75 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-/*        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
-        viewPager2 = findViewById(R.id.main_viewpager);
-        tabLayout = findViewById(R.id.main_tab);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+  //      viewPager2 = findViewById(R.id.main_viewpager);
+   //     tabLayout = findViewById(R.id.main_tab);
         toolbar = findViewById(R.id.custom_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Events");
 
 
 
+
+
+
+        // selecting the menu and highlighting the menu in the bottom navigation bar
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
+
+
+
+        // switching activity using bottom navigation view
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
+                switch (item.getItemId()){
+                    case R.id.home:
+                        break;
+                    case R.id.event:
+                        intent = new Intent(MainActivity.this,EventsActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.profile:
+                        intent = new Intent(MainActivity.this,ProfileActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.teams:
+                        intent = new Intent(MainActivity.this,TeamActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.logout:
+                        intent = new Intent(MainActivity.this,LogoutActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+
+                }
+
+
+                return false;
+            }
+        });
+        /*
         drawerLayout = findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+         */
+
+ //       navigationView = findViewById(R.id.nav_menu);
+ //       fname = navigationView.getHeaderView(0).findViewById(R.id.name_text);
 
 
-        navigationView = findViewById(R.id.nav_menu);
-        fname = navigationView.getHeaderView(0).findViewById(R.id.name_text);
-
-
-        viewPager2.setAdapter(new PagerAdapter(this));
-        synctab();
-        logout();
+ //       viewPager2.setAdapter(new PagerAdapter(this));
+ //       synctab();
+ //       logout();
         /*navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -123,6 +171,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        overridePendingTransition(0,0);// to avoid the transition happening between the activity
     }
 
     private void synctab() {
