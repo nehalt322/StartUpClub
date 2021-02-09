@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".SplashActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/splash_startup"
+        android:layout_centerInParent="true"
+        android:src="@drawable/startuplogo"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/orange"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TheStartUpClubOfMCKVIE"
+        android:textColor="@color/light_orange"
+        android:layout_below="@+id/splash_startup"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"/>
+
+
+</RelativeLayout>

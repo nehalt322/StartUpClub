@@ -25,10 +25,12 @@
                     android:id="@+id/custom_toolbar"
                     app:layout_scrollFlags="scroll|enterAlways"
                     android:background="@color/blue">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
+                        app:civ_border_color="@color/orange"
+                        app:civ_border_width="1dp"
                         android:src="@drawable/startuplogo"/>
 
                 </androidx.appcompat.widget.Toolbar>
@@ -62,7 +64,6 @@
                 app:itemIconTint="@drawable/selector"
                 app:itemTextColor="@drawable/selector"
                 app:menu="@menu/main">
-
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         </RelativeLayout>

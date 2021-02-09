@@ -91,7 +91,9 @@ public class LogoutActivity extends AppCompatActivity {
     // function for logout
     private void logout() {
         mAuth.getInstance().signOut();
-        startActivity(new Intent(LogoutActivity.this, login.class));
+        Intent intent = new  Intent(LogoutActivity.this, login.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
         finish();
         overridePendingTransition(0,0);// to avoid the transition happening between the activity
     }
