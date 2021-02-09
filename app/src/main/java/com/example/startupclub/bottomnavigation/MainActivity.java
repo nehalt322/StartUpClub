@@ -1,22 +1,20 @@
-package com.example.startupclub;
+package com.example.startupclub.bottomnavigation;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.startupclub.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -27,11 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -57,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-  //      viewPager2 = findViewById(R.id.main_viewpager);
-   //     tabLayout = findViewById(R.id.main_tab);
         toolbar = findViewById(R.id.custom_toolbar);
 
 
@@ -71,43 +63,12 @@ public class MainActivity extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(0);
         menuItem.setChecked(true);
 
+        // setting navigation view and switching activity using bottom navigation view
+        setNavigationView();
 
 
-        // switching activity using bottom navigation view
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Intent intent;
-                switch (item.getItemId()){
-                    case R.id.home:
-                        break;
-                    case R.id.event:
-                        intent = new Intent(MainActivity.this,EventsActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
-                        break;
-                    case R.id.profile:
-                        intent = new Intent(MainActivity.this,ProfileActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
-                        break;
-                    case R.id.teams:
-                        intent = new Intent(MainActivity.this,TeamActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
-                        break;
-                    case R.id.logout:
-                        intent = new Intent(MainActivity.this,LogoutActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
-                        break;
-
-                }
 
 
-                return false;
-            }
-        });
         /*
         drawerLayout = findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
@@ -171,6 +132,43 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void setNavigationView() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
+                switch (item.getItemId()){
+                    case R.id.home:
+                        break;
+                    case R.id.event:
+                        intent = new Intent(MainActivity.this,EventsActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.profile:
+                        intent = new Intent(MainActivity.this,ProfileActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.teams:
+                        intent = new Intent(MainActivity.this,TeamActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+                    case R.id.logout:
+                        intent = new Intent(MainActivity.this,LogoutActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);// to avoid the transition happening between the activity
+                        break;
+
+                }
+
+
+                return false;
+            }
+        });
     }
 
     @Override
